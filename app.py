@@ -5,8 +5,8 @@ import lib
 
 app = Flask(__name__)
 
-@app.route('/upload', methods=['POST'])
-def upload_image():
+@app.route('/process', methods=['POST'])
+def process_image():
     try:
         data = request.get_json()
         if 'image' in data:
