@@ -9,7 +9,7 @@ import base64
 #     base64_image= base64.b64encode(image_file.read()).decode('utf-8')
  
 # # Send a POST request to the Flask server
-# response = requests.post('http://localhost:8001/upload', json={"image": base64_image,"prompt":"Is it an image of a medicine? Anser yes or no"})
+# response = requests.post('http://localhost:8001/process', json={"image": base64_image,"prompt":"Is it an image of a medicine? Anser yes or no"})
 
 
 # print(response.json())
@@ -20,5 +20,5 @@ with open(image_path, "rb") as image_file:
  
 # Send a POST request to the Flask server
 
-response = requests.post('http://localhost:8001/upload', json={"image": base64_image,"prompt":"Can you read the text."})
+response = requests.post('http://localhost:8001/process', json={"image": base64_image,"prompt":"Can you read the text."})
 print(response.json())
